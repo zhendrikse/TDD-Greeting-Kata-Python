@@ -9,17 +9,17 @@ def greet_visitor(name, *names):
         visitor = "my friend"
 
     if visitor.isupper():
-        return "HELLO " + create_visitor_list(visitor, *names) + "!"
+        return "HELLO " + __create_visitor_list(visitor, *names) + "!"
     else:
-        return "Hello, " + create_visitor_list(visitor, *names) + "."
+        return "Hello, " + __create_visitor_list(visitor, *names) + "."
 
 
-def two_names_list(name1, name2):
+def __two_names_list(name1, name2):
     other = "my friend" if name2 is None else name2
     return name1 + " and " + other
 
 
-def multiple_names_list(name, *names):
+def __multiple_names_list(name, *names):
     names_list = name
     for i in range(len(names)):
         separator = ", " if i < len(names) - 1 else ", and "
@@ -28,12 +28,12 @@ def multiple_names_list(name, *names):
     return names_list
 
 
-def create_visitor_list(name, *names):
+def __create_visitor_list(name, *names):
     if names:
         if len(names) == 1:
-            return two_names_list(name, names[0])
+            return __two_names_list(name, names[0])
         else:
-            return multiple_names_list(name, *names)
+            return __multiple_names_list(name, *names)
 
     return name
 
