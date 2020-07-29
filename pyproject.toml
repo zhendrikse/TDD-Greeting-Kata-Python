@@ -1,8 +1,9 @@
 [tool]
 [tool.poetry]
-authors = ["Your Name <you@example.com>"]
+authors = ["Zeger Hendrikse <zegerh@yahoo.co.uk>"]
 name = "root"
-version = "0.0.0"
+version = "0.0.1"
+description = "TDD Greeting Kata"
 [tool.poetry.dependencies]
-pytest = "==5.2.1"
+pytest = "==6.0.0"
 python = "^3.8"
