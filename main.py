@@ -1,7 +1,7 @@
 import os
 
 def greet_visitor(name: str, *names: [str]) -> str:
-    visitor = name
+    visitor:str = name
     if name is None:
         visitor = "my friend"
     elif not name:
@@ -14,12 +14,12 @@ def greet_visitor(name: str, *names: [str]) -> str:
 
 
 def _two_names_list(name1: str, name2: str) -> str:
-    other = "my friend" if name2 is None else name2
+    other:str = "my friend" if name2 is None else name2
     return name1 + " and " + other
 
 
 def _multiple_names_list(name: str, *names) -> str:
-    names_list = name
+    names_list:str = name
     for i in range(len(names)):
         separator = ", " if i < len(names) - 1 else ", and "
         names_list += separator + names[i]
